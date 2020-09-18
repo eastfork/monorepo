@@ -1,4 +1,2 @@
-dist
-cjs
-esm
+**/build/**
 tsconfig.json

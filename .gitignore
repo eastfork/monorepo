@@ -1,5 +1,5 @@
 # build artifact folders
-build/**
+**/build/**
 
 # IDEs
 .idea
