@@ -1,13 +1,13 @@
 {
   "name": "@abacus/frontend",
-  "version": "1.0.0",
-  "main": "cjs/index.js",
-  "types": "cjs/index.d.ts",
+  "version": "0.0.1",
+  "main": "build/cjs/index.js",
+  "types": "build/cjs/index.d.ts",
   "scripts": {
-    "clean": "rimraf ./cjs ./umd",
+    "clean": "rimraf build",
     "prebuild": "yarn clean",
     "build": "yarn build:cjs && yarn build:umd",
-    "build:cjs": "ts-build ./src --cjs",
+    "build:cjs": "ts-build ./src --cjs --esm --out-dir build",
     "build:umd": "yarn bundle:prod",
     "bundle:prod": "webpack --mode production",
     "bundle:dev": "webpack --mode development --devtool source-map",
@@ -20,16 +20,15 @@
     "react-dom": ">=16"
   },
   "dependencies": {
-    "@abacus/components": "^1.0.0",
+    "@abacus/components": "^0.0.1",
     "sanitize.css": "^12.0.1"
   },
   "files": [
-    "cjs",
-    "umd",
+    "build/cjs",
+    "build/umd",
     "src"
   ],
   "license": "MIT",
-  "repository": "git@github.com:wixplosives/sample.git",
   "private": true,
   "publishConfig": {
     "access": "public"

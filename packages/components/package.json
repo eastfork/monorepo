@@ -1,13 +1,13 @@
 {
   "name": "@abacus/components",
-  "version": "1.0.0",
-  "main": "cjs/index.js",
-  "module": "esm/index.js",
-  "types": "esm/index.d.ts",
+  "version": "0.0.1",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/esm/index.d.ts",
   "scripts": {
-    "clean": "rimraf ./cjs ./esm",
+    "clean": "rimraf build",
     "prebuild": "yarn clean",
-    "build": "ts-build ./src --cjs --esm",
+    "build": "ts-build ./src --cjs --esm --out-dir build",
     "test": "mocha \"test/**/*.spec.ts?(x)\"",
     "prepack": "yarn build"
   },
@@ -15,8 +15,8 @@
     "react": ">=16"
   },
   "files": [
-    "cjs",
-    "esm",
+    "build/cjs",
+    "build/esm",
     "src"
   ],
   "license": "MIT",

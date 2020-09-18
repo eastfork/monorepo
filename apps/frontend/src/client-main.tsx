@@ -1,10 +1,8 @@
 import React from 'react';
 import { render, hydrate } from 'react-dom';
-import { App } from './app';
+import { App, rootContainerId } from './app';
 import 'sanitize.css';
 import 'sanitize.css/typography.css';
-
-const rootContainerId = 'SITE_MAIN';
 
 const createContainer = (targetParent: Element) => {
   const newContainer = document.createElement('div');

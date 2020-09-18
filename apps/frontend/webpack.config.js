@@ -9,7 +9,7 @@ module.exports = {
     main: require.resolve('./src/client-main.tsx'),
   },
   output: {
-    path: path.join(__dirname, 'umd'),
+    path: path.join(__dirname, 'build', 'umd'),
     libraryTarget: 'umd',
   },
   plugins: [...rootWebpackConfig.plugins, new HtmlWebpackPlugin({ title: 'Sample Monorepo App' })],

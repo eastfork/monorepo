@@ -10,7 +10,7 @@
     "lint": "eslint . -f codeframe",
     "pretest": "yarn typecheck && yarn lint",
     "test": "yarn test:unit",
-    "test:unit": "mocha \"packages/**/test/**/*.spec.ts?(x)\"",
+    "test:unit": "mocha \"{apps,packages}/**/test/**/*.spec.ts?(x)\"",
     "start": "yarn start:client",
     "start:client": "yarn workspace @abacus/frontend start",
     "start:server": "yarn workspace @abacus/backend start",
