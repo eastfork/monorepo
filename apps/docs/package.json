@@ -1,0 +1,46 @@
+{
+  "name": "@abacus/docs",
+  "version": "0.0.1",
+  "main": "build/cjs/index.js",
+  "types": "build/cjs/index.d.ts",
+  "scripts": {
+    "clean": "rimraf build",
+    "prebuild": "yarn clean",
+    "build": "yarn build:cjs",
+    "build:cjs": "ts-build ./src --cjs --esm --out-dir build",
+    "bundle:prod": "webpack --mode production",
+    "bundle:dev": "webpack --mode development --devtool source-map",
+    "test": "mocha \"test/**/*.spec.ts?(x)\"",
+    "start": "webpack-dev-server --mode development --progress --open",
+    "prepack": "yarn build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "dependencies": {
+    "@abacus/components": "^0.0.1",
+    "sanitize.css": "^12.0.1"
+  },
+  "files": [
+    "build/cjs",
+    "src"
+  ],
+  "license": "MIT",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/cli": "^6.0.21",
+    "@storybook/react": "^6.0.21",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1"
+  }
+}

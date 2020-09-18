@@ -1,5 +1,8 @@
+const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const tsConfig = path.join(__dirname, './tsconfig.json');
 
 module.exports = {
   devtool: 'source-map',
@@ -22,7 +25,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.mjs', '.js', '.json'],
-    plugins: [new TsconfigPathsPlugin({ configFile: require.resolve('./tsconfig.json') })],
+    plugins: [new TsconfigPathsPlugin({ configFile: require.resolve(tsConfig) })],
   },
   plugins: [
     new MiniCssExtractPlugin({
