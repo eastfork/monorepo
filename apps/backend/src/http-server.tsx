@@ -3,7 +3,7 @@ import express from 'express';
 import compression from 'compression';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { App } from '@abacus/frontend';
+import { App, rootContainerId } from '@abacus/frontend';
 
 const appRootDirectory = dirname(require.resolve('@abacus/frontend/package.json'));
 const appBundleDirectory = join(appRootDirectory, 'umd');
@@ -16,7 +16,7 @@ export const createHttpServer = (): express.Express => {
   app.get('/server', ssrHandler);
 
   return app;
-}
+};
 
 const ssrHandler = (_req: express.Request, res: express.Response) => {
   res.end(
@@ -31,11 +31,11 @@ const ssrHandler = (_req: express.Request, res: express.Response) => {
     <link href="main.css" rel="stylesheet">
 </head>
 <body>
-    <div id="SITE_MAIN" data-ssr>
+    <div id="${rootContainerId}" data-ssr>
         ${ReactDOMServer.renderToString(<App text="Hello World (SSR!)" />)}
     </div>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>`
   );
-}
+};
