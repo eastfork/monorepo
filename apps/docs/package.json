@@ -13,7 +13,7 @@
     "test": "mocha \"test/**/*.spec.ts?(x)\"",
     "start": "webpack-dev-server --mode development --progress --open",
     "prepack": "yarn build",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --config-dir etc",
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
@@ -39,6 +39,7 @@
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
     "@storybook/cli": "^6.0.21",
+    "@storybook/linter-config": "^2.5.0",
     "@storybook/react": "^6.0.21",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1"
