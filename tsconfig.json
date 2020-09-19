@@ -78,11 +78,6 @@
     "packages"
   ],
   "exclude": [
-    "apps/*/cjs",
-    "apps/*/esm",
-    "apps/*/dist",
-    "packages/*/cjs",
-    "packages/*/esm",
-    "packages/*/dist"
+    "{apps,packages}/*/build"
   ]
 }

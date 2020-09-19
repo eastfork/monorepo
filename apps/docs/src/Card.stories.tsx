@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 import { Card } from '@abacus/components';
 
 export default {

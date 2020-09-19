@@ -1,6 +1,0 @@
-{
-  "extends": [
-    "../../.eslintrc",
-  ],
-  "plugins": ["@storybook/linter-config"]
-}
