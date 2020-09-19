@@ -1,7 +1,6 @@
 # This is a newly imagined version of Abacus as a monorepo
 
-
-__This couldn't have been possible without [this starter kit](https://github.com/wixplosives/sample-monorepo)__
+**This couldn't have been possible without [this starter kit](https://github.com/wixplosives/sample-monorepo)**
 
 Sample monorepo setup with yarn workspaces, typescript, and lerna.
 
