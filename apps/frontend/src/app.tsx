@@ -1,5 +1,5 @@
 import React from 'react';
-import { Main } from '@abacus/components';
+import { Main } from '@abacus/components/main';
 
 export interface AppProps {
   text: string;

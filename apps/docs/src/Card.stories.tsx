@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Meta, Story } from '@storybook/react';
-import { Card } from '@abacus/components';
+import { Card } from '@abacus/components/main';
 
 export default {
   title: 'JBL/Card',
