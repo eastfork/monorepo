@@ -1,9 +1,7 @@
 {
   "name": "@abacus/components",
   "version": "0.0.1",
-  "main": "build/cjs/index.js",
-  "module": "build/esm/index.js",
-  "types": "build/esm/index.d.ts",
+  "main": "index.js",
   "scripts": {
     "clean": "rimraf build",
     "prebuild": "yarn clean",
@@ -14,15 +12,11 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "files": [
-    "build/cjs",
-    "build/esm",
-    "src"
-  ],
   "license": "MIT",
   "sideEffects": false,
   "private": true,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "build/cjs"
   }
 }

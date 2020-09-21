@@ -6,17 +6,18 @@
   ],
   "scripts": {
     "clean": "lerna run clean --stream --parallel",
-    "build": "lerna run build --stream --parallel",
+    "build": "lerna run build --stream",
+    "format": "npx prettier --write .",
     "lint": "eslint . -f codeframe",
     "pretest": "yarn typecheck && yarn lint",
+    "prepare": "lerna run build --scope=@abacus/components && lerna link",
     "test": "yarn test:unit",
     "test:unit": "mocha \"{apps,packages}/**/test/**/*.spec.ts?(x)\"",
     "start": "lerna run start --stream --parallel",
     "start:frontend": "yarn workspace @abacus/frontend start",
     "start:backend": "yarn workspace @abacus/backend start",
     "start:docs": "yarn workspace @abacus/backend storybook",
-    "typecheck": "tsc --noEmit",
-    "prettify": "npx prettier \"./**/*.{js,ts,tsx}\" --write"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@ts-tools/build": "^2.1.1",
