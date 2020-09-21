@@ -23,14 +23,10 @@
     "@abacus/components": "^0.0.1",
     "sanitize.css": "^12.0.1"
   },
-  "files": [
-    "build/cjs",
-    "build/umd",
-    "src"
-  ],
   "license": "MIT",
   "private": true,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "build/cjs"
   }
 }

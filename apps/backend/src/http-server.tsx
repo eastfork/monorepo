@@ -6,7 +6,7 @@ import ReactDOMServer from 'react-dom/server';
 import { App, rootContainerId } from '@abacus/frontend';
 
 const appRootDirectory = dirname(require.resolve('@abacus/frontend/package.json'));
-const appBundleDirectory = join(appRootDirectory, 'umd');
+const appBundleDirectory = join(appRootDirectory, 'build', 'umd');
 
 export const createHttpServer = (): express.Express => {
   const app = express();
