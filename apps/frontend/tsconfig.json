@@ -6,5 +6,8 @@
       "path": "../../packages/components/tsconfig.json"
     }
   ],
-  "build": ["build/**/*"]
+  "compilerOptions": {
+    "outDir": "build/cjs",
+    "module": "CommonJS"
+  }
 }

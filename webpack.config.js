@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: '@ts-tools/webpack-loader',
+        loader: 'ts-loader',
       },
       {
         test: /\.css$/,
