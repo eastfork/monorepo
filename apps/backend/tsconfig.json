@@ -1,5 +1,13 @@
 {
   "extends": "../../tsconfig.json",
   "include": ["src/**/*"],
-  "build": ["build/**/*"]
+  "build": ["build/**/*"],
+  "references": [
+    {
+      "path": "../frontend"
+    }
+  ],
+  "compilerOptions": {
+    "module": "commonjs"
+  }
 }

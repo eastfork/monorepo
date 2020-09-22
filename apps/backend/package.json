@@ -1,15 +1,14 @@
 {
   "name": "@abacus/backend",
   "version": "0.0.1",
-  "main": "build/cjs/index.js",
-  "types": "build/cjs/index.d.ts",
+  "main": "index.js",
   "scripts": {
     "clean": "rimraf ./build",
     "prebuild": "yarn clean",
     "build": "ts-build ./src --cjs --esm --out-dir ./build",
     "test": "mocha \"test/**/*.spec.ts?(x)\"",
     "prestart": "yarn workspace @abacus/frontend build:umd",
-    "start": "node -r @ts-tools/node/r -r tsconfig-paths/register ./src/server-main.ts",
+    "start": "ts-node-dev -r ignore-styles ./src/server-main.ts",
     "prepack": "yarn build"
   },
   "peerDependencies": {
@@ -21,14 +20,10 @@
     "compression": "^1.7.4",
     "express": "^4.17.1"
   },
-  "files": [
-    "build/cjs",
-    "build/esm",
-    "src"
-  ],
   "license": "MIT",
   "private": true,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "build/cjs"
   }
 }

@@ -6,6 +6,7 @@
     "clean": "rimraf build",
     "prebuild": "yarn clean",
     "build": "ts-build ./src --cjs --esm --out-dir build",
+    "start": "webpack --watch --mode development --devtool source-map",
     "test": "mocha \"test/**/*.spec.ts?(x)\"",
     "prepack": "yarn build"
   },

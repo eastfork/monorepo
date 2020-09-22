@@ -11,7 +11,6 @@
     "bundle:prod": "webpack --mode production",
     "bundle:dev": "webpack --mode development --devtool source-map",
     "test": "mocha \"test/**/*.spec.ts?(x)\"",
-    "start": "webpack-dev-server --mode development --progress --open",
     "prepack": "yarn build",
     "storybook": "start-storybook -p 6006 --config-dir etc",
     "build-storybook": "build-storybook"

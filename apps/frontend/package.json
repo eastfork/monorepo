@@ -12,7 +12,9 @@
     "bundle:prod": "webpack --mode production",
     "bundle:dev": "webpack --mode development --devtool source-map",
     "test": "mocha \"test/**/*.spec.ts?(x)\"",
-    "start": "webpack-dev-server --mode development --progress --open",
+    "start": "yarn run start:build",
+    "start:build": "webpack --watch --mode development --progress --open --inline --hot",
+    "start:server": "webpack-dev-server --mode development --progress --open --inline --hot",
     "prepack": "yarn build"
   },
   "peerDependencies": {
@@ -27,6 +29,6 @@
   "private": true,
   "publishConfig": {
     "access": "public",
-    "directory": "build/cjs"
+    "directory": "build/umd/"
   }
 }
