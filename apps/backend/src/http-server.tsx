@@ -34,7 +34,7 @@ const ssrHandler = (_req: express.Request, res: express.Response) => {
     <div id="${rootContainerId}" data-ssr>
         ${ReactDOMServer.renderToString(<App text="Hello World (SSR!)" />)}
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>`
   );

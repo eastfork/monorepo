@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: '@ts-tools/webpack-loader',
       },
       {
         test: /\.css$/,
@@ -33,4 +33,7 @@ module.exports = {
       chunkFilename: '[name].css',
     }),
   ],
+  output: {
+    filename: 'index.js',
+  },
 };

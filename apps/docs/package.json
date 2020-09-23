@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf build",
     "prebuild": "yarn clean",
-    "build": "yarn build:cjs",
+    "build": "build-storybook",
     "build:cjs": "ts-build ./src --cjs --esm --out-dir build",
     "bundle:prod": "webpack --mode production",
     "bundle:dev": "webpack --mode development --devtool source-map",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@abacus/components": "^0.0.1",
+    "@abacus/frontend": "^0.0.1",
     "sanitize.css": "^12.0.1"
   },
   "files": [
