@@ -75,7 +75,8 @@
   },
   "include": [
     "apps",
-    "packages"
+    "packages",
+    "setupTests.ts"
   ],
   "exclude": [
     "{apps,packages}/*/build"

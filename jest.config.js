@@ -15,4 +15,6 @@ module.exports = {
   modulePaths: ['<rootDir>'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleDirectories: ['.', 'src', 'node_modules'],
+  setupFiles: ['./setupTests.ts'],
+  snapshotSerializers: ['enzyme-to-json'],
 };

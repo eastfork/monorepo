@@ -1,10 +1,14 @@
 import React from 'react';
-import { App } from '@abacus/frontend';
 import { renderToString } from 'react-dom/server';
+import { shallow } from 'enzyme';
+
+import { Main } from '@abacus/components/main';
+import { App, defaultText } from '@abacus/frontend';
 
 describe('<App />', () => {
   it('renders without throwing on the server', () => {
-    expect(() => renderToString(<App text="" />)).not.toThrow();
+    const wrapper = shallow(<App text="" />);
+    expect(wrapper.contains(<Main text={defaultText} />)).toEqual(true);
   });
 
   it('renders provided text', () => {
